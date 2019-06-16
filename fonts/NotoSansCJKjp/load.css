@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*
+
+■ 日本語フリーフォントをwebフォント化する4ステップ
+http://www.hirok-k.com/blog/751.html
+
+■ font-weight－スタイルシートリファレンス
+http://www.htmq.com/style/font-weight.shtml
+
+400 normal 標準の太さ
+700 bold   一般的な太字の太さ
+
+■ 読み込み
+@import url(../fonts/NotoSansCJKjp/load.css);
+
+*/
+
+@font-face {
+	font-family: 'NotoSansCJKjp';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url(./NotoSansCJKjp-Regular.woff2) format('woff2'),
+		url(./NotoSansCJKjp-Regular.woff) format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'NotoSansCJKjp';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url(./NotoSansCJKjp-Medium.woff2) format('woff2'),
+		url(./NotoSansCJKjp-Medium.woff) format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'NotoSansCJKjp';
+	font-style: normal;
+	font-weight: 600;
+	src:
+		url(./NotoSansCJKjp-SemiBold.woff2) format('woff2'),
+		url(./NotoSansCJKjp-SemiBold.woff) format('woff')
+	;
+}
+
+@font-face {
+ 	font-family: 'NotoSansCJKjp';
+ 	font-style: normal;
+ 	font-weight: 700;
+	src:
+		url(./NotoSansCJKjp-Bold.woff2) format('woff2'),
+		url(./NotoSansCJKjp-Bold.woff) format('woff')
+	;
+}
+
+@font-face {
+	font-family: 'NotoSansCJKjp';
+	font-style: normal;
+	font-weight: 900;
+	src:
+		url(./NotoSansCJKjp-Black.woff2) format('woff2'),
+		url(./NotoSansCJKjp-Black.woff) format('woff')
+	;
+}

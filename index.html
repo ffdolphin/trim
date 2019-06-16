@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>画像のトリミング練習</title>
+  </head>
+  <body>
+    <div class="content-area">
+      <p class="center">最大表示領域809px</p>
+      <h1>元画像（大）(860x546px)</h1>
+      <img src="images/190528lowstool_sp.jpg" alt="元画像">
+
+      <h1>CSSでトリミング後の画像（76%の大きさ）</h1>
+      <div class="photo-box">
+        <a href="#">
+          <span class="trim">
+            <img src="images/190528lowstool_sp.jpg" alt="元画像をトリミング">
+          </span>
+        </a>
+      </div>
+
+      <h1>元画像（小）</h1>
+      <img src="images/190528lowstool.jpg" alt="元画像の小">
+
+      <h1>CSSでトリミング後の画像をトップページ同様に並べる</h1>
+      <div class="photo-inline-box">
+
+        <div class="photo-box photo-box-pd">
+          <a href="#">
+            <span class="trim">
+              <img src="images/190528lowstool_sp.jpg" alt="元画像をトリミング">
+            </span>
+          </a>
+          <p class="text-style">様々なインテリアスタイルに合うオシャレなロースツールが新入荷！</p>
+        </div>
+
+        <div class="photo-box photo-box-pd">
+          <a href="#">
+            <span class="trim">
+              <img src="images/190528lowstool_sp.jpg" alt="元画像をトリミング">
+            </span>
+          </a>
+          <p class="text-style">様々なインテリアスタイルに合うオシャレなロースツールが新入荷！</p>
+        </div>
+
+        <div class="photo-box photo-box-pd">
+          <a href="#">
+            <span class="trim">
+              <img src="images/190528lowstool_sp.jpg" alt="元画像をトリミング">
+            </span>
+          </a>
+          <p class="text-style">様々なインテリアスタイルに合うオシャレなロースツールが新入荷！</p>
+        </div>
+
+      </div><!--photo-inline-box-->
+    </div><!--content-area-->
+
+    <!--objedt-fit（IE対策）-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.3/ofi.js"></script>
+    <script>objectFitImages();</script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/* 明朝体でよく使うフォントを読み込み */
+@import url(../fonts/NotoSerifCJKjp/load.css);
+/* ゴシック体でよく使うフォントを読み込み */
+@import url(../fonts/NotoSansCJKjp/load.css);
+
+/* 基本設定 */
+body {
+	color: #333;
+	font-size: 15px;
+	line-height: 1.6;
+  /* 明朝体の時 */
+	font-family: 'Noto Serif Japanese',"游明朝", YuMincho, "ヒラギノ明朝 Pro W6", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", serif;
+  /* ゴシック体の時 */
+  font-family: 'NotoSansCJKjp', "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /* 横幅1080px以下の時はスクロールバーを表示させる */
+  min-width: 1080px;
+}
+
+/* スマホサイズの時の設定 */
+@media screen and (max-width: 768px) {
+	html {
+    /* 画面横幅に対して4%をフォントサイズに指定*/
+		font-size: 4vw;
+	}
+
+	body {
+    /* 最上位の親要素（html要素）を基準値としたサイズ */
+    /* およそ14px - 15pxになる */
+		font-size: 1rem;
+		/* 横スクロールバーは表示させないので0に設定 */
+		min-width: 0;
+	}
+}
+
+.content-area{
+  width: 809px;
+  margin: 20px auto;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+}
+/* 画像を横並びにしてtop,leftに罫線を引く */
+.photo-inline-box{
+  display: flex;
+  border-top: 2px solid #eee;
+  border-left: 2px solid #eee;
+}
+
+/* ここから画像トリミングのCSS */
+.photo-box{
+  width: 237px;
+}
+.photo-box a {
+	display: block;
+}
+.photo-box .trim {
+	padding-top: 76%;
+	display: block;
+	position: relative;
+  /* height: 61.8 黄金比 */
+  /* height: 70.72 白銀比 和風 */
+  /* height: 30.27 青銅比 トップページ画像などに */
+}
+.photo-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	font-family: 'object-fit: cover;'; /*IE対策*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* ここまで画像トリミングのCSS */
+
+/* 写真に余白を設定して右と下に罫線を引く */
+.photo-box-pd{
+  padding: 15px;
+  border-right: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+}
+/* ３つ目の写真だけ右に余白が余るので1px余白を増やす */
+.photo-box-pd:nth-child(3n){
+  padding-right: 16px;
+}
+
+.text-style{
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'NotoSansCJKjp';
+  color: #212121;
+  margin-top: 15px;
+}
+.center{
+  text-align: center;
+}
